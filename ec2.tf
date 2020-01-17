@@ -5,7 +5,7 @@ resource "aws_instance" "dev" {
   instance_type   = var.instance_type
   associate_public_ip_address = var.associate_public_ip_address
   key_name = aws_key_pair.terraform.key_name
-  security_groups = ["bastionhost"]
+  security_groups = ["syed-bastion"]
    provisioner "remote-exec" {
     connection {
       host        = self.public_ip
