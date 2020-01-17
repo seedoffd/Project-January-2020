@@ -4,7 +4,7 @@ resource "aws_instance" "dev" {
   ami             = "${data.aws_ami.centos.image_id}"
   instance_type   = var.instance_type
   associate_public_ip_address = var.associate_public_ip_address
-  key_name = aws_key_pair.terraform.key_name
+  key_name = aws_key_pair.syed-bastion.key_name
   security_groups = ["syed-bastion"]
    provisioner "remote-exec" {
     connection {
